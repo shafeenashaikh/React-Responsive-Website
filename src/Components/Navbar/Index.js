@@ -1,11 +1,32 @@
-import React from 'react'
+import React from 'react';
+import {FaBars} from 'react-icons/fa';
+import { Nav,
+    NavbarContainer,
+    NavLogo,
+    MobileIcon,
+    NavMenu,
+    NavItem,
+    NavLinks
+ } from './NavbarElements'
 
-function Index() {
+function Navbar() {
     return (
-        <div>
-            
-        </div>
+       <>
+        <Nav>
+           <NavbarContainer>
+               <NavLogo to='/'>Home</NavLogo>
+               <MobileIcon>
+                   <FaBars/>
+               </MobileIcon>
+               <NavMenu>
+                   <NavItem>
+                       <NavLinks to='about'>About</NavLinks>
+                   </NavItem>
+               </NavMenu>
+           </NavbarContainer>
+        </Nav>
+       </>
     )
 }
 
-export default Index;
+export default Navbar
