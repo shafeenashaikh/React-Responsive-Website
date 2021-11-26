@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'react-scroll';
+import {Button} from '../ButtonElements';
 import {
          Img, 
          ImgWrap, 
@@ -16,25 +16,25 @@ import {
 } from './InfoElements';
 
 
-function InfoSection() {
+function InfoSection({lightBg,id,imgStart,topLine,ligthText,darkText,headline,description,buttonLabel,img,alt}) {
     return (
         <>
-            <InfoContainer>
+            <InfoContainer lightBg={lightBg} id={id}>
                 <InfoWrapper>
-                    <InfoRow>
+                    <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
-                                <TopLine>TopLine</TopLine>
-                                <Heading>Heading</Heading>
-                                <SubTitle>SubTitle</SubTitle>
+                                <TopLine>{topLine}</TopLine>
+                                <Heading ligthText={ligthText}>{headline}</Heading>
+                                <SubTitle darkText={darkText}>{description}</SubTitle>
                                 <BtnWrap>
-                                    <Button to="home"/>
+                                    <Button to="home">{buttonLabel}</Button>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img/>
+                                <Img src={img} alt={alt}/>
                             </ImgWrap>
                         </Column2>
                     </InfoRow>
