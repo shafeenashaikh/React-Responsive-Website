@@ -4,8 +4,8 @@ import {Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.nav`
 background: #000;
-hieght: 8-px;
-// margin-top: 10px;
+hieght: 80px;
+// margin-top: -80px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -14,20 +14,20 @@ position: sticky;
 top: 0;
 z-index: 10;
 
-@media screeen and (max-width: 960px){
+@media screen and (max-width: 960px){
     transition: 0.8 all ease;
 `;
 export const NavbarContainer = styled.div`
-    displau: flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     height: 80px;
-    z-index: 1px;
+    z-index: 1;
     width: 100%;
-    padiding: 0 24px;
+    padding: 0 24px;
     max-width: 1100px
 `;
 export const NavLogo = styled(LinkR)`
-    color: red;
+    color: #fff;
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -36,7 +36,7 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 5px;
+    // margin-top: 5px;
 
 `;
 
@@ -51,11 +51,12 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
+        color: #fff;
     }
 `;
 
 export const NavMenu = styled.ul`
-    // display: flex;
+    display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
@@ -72,7 +73,7 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(LinkS)`
     color: #fff;
-    // display: flex;
+    display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
@@ -81,5 +82,33 @@ export const NavLinks = styled(LinkS)`
 
     &.active {
         border-bottom: 3px solid #01bf71;
+    }
+`;
+
+export const NavBtn = styled.nav`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`;
+
+export const NavBtnLink = styled(LinkR)`
+    border-radius: 50px;
+    background: #01bf71;
+    padding: 10px 22px;
+    color: #010606;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        bckground: #fff;
+        color: @010606;
     }
 `;
