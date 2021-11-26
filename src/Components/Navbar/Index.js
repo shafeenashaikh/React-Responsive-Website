@@ -11,13 +11,13 @@ import { Nav,
     NavBtnLink
  } from './NavbarElements'
 
-function Navbar() {
+function Navbar({toggle}) {
     return (
        <>
         <Nav>
            <NavbarContainer>
                <NavLogo to='/'>Home</NavLogo>
-               <MobileIcon>
+               <MobileIcon onClick={toggle}>
                    <FaBars/>
                </MobileIcon>
                <NavMenu>
