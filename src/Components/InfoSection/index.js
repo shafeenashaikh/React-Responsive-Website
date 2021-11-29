@@ -38,7 +38,7 @@ function InfoSection({
         <>
             <InfoContainer lightBg={lightBg} id={id}>
                 <InfoWrapper>
-                    <InfoRow imgStart={imgStart}>
+                    <InfoRow  imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
                                 <TopLine>{topLine}</TopLine>
