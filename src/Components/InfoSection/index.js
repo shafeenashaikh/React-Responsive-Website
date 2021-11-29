@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from '../ButtonElements';
+// import svg1 from '../../Images/svg1.svg';
 import {
          Img, 
          ImgWrap, 
@@ -12,11 +13,27 @@ import {
          TopLine,
          Heading,
          SubTitle,
-         BtnWrap
+         BtnWrap,
+        
 } from './InfoElements';
 
 
-function InfoSection({lightBg,id,imgStart,topLine,ligthText,darkText,headline,description,buttonLabel,img,alt}) {
+function InfoSection({
+    lightBg,
+    id,
+    imgStart,
+    topLine,
+    lightText,
+    darkText,
+    headline,
+    description,
+    buttonLable,
+    alt,
+    primary,
+    dark,
+    dark2,
+    img
+}) {
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id}>
@@ -25,10 +42,19 @@ function InfoSection({lightBg,id,imgStart,topLine,ligthText,darkText,headline,de
                         <Column1>
                             <TextWrapper>
                                 <TopLine>{topLine}</TopLine>
-                                <Heading ligthText={ligthText}>{headline}</Heading>
+                                <Heading lightText={lightText}>{headline}</Heading>
                                 <SubTitle darkText={darkText}>{description}</SubTitle>
                                 <BtnWrap>
-                                    <Button to="home">{buttonLabel}</Button>
+                                    <Button to="home"
+                                       smooth={true}
+                                       duration={500}
+                                       spy={true}
+                                       exact="true"
+                                       offset={-80}
+                                       primary={primary ? 1 : 0}
+                                       dark={dark ? 1 : 0}
+                                       dark2={dark2 ? 1 : 0}
+                                    >{buttonLable}</Button>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
