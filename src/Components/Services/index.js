@@ -1,4 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Icon1 from '../../Images/svg1.svg';
+import Icon2 from '../../Images/svg2.svg';
+import Icon3 from '../../Images/svg4.svg'
+
+import { 
+    ServicesP,
+    ServicesContainer,
+    ServicesH1,
+    ServicesWrapper,
+    ServicesCard,
+    ServicesIcon,
+    ServicesH2,
+} from './ServiceElements';
+
 
 function Services() {
     return (
@@ -9,7 +23,7 @@ function Services() {
                     <ServicesCard>
                         <ServicesIcon src={Icon1}/>
                         <ServicesH2>Reduce expenses</ServicesH2>
-                        <ServicesP> We help reduce your fees and increase your
+                        <ServicesP>We help reduce your fees and increase your
                             overall revenue.
                         </ServicesP>
                     </ServicesCard>
